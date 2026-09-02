@@ -1,6 +1,6 @@
 /**
  * إعدادات المتجر المركزية - متجر بشاير
- * UAE Market - Smart Robot Dog
+ * UAE Market - Smart Robot Dog (Real High-Res Sourced Images)
  */
 
 const STORE_CONFIG = {
@@ -41,11 +41,12 @@ const STORE_CONFIG = {
         stockRemaining: 14,
         activeViewers: 22,
         
+        // صور المنتج الحقيقية الرسمية المطابقة تمامًا لمنتج زمبيل ودبدوب
         images: [
-            "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?auto=format&fit=crop&w=1000&q=85",
-            "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80",
-            "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=600&q=80",
-            "https://images.unsplash.com/photo-1508873696983-2df5293cb395?auto=format&fit=crop&w=600&q=80"
+            "https://dabdoob-cdn-primary.fra1.cdn.digitaloceanspaces.com/media/master/sku/6Os5TK/7030c103-ce92-40af-ba87-ae9a0530051a_e-Sq5mD2d12.jpeg",
+            "https://i5.walmartimages.com/seo/Ficcug-Remote-Control-Robot-Dog-Intelligent-Robot-Toys-Kids-Programmable-Smart-Interactive-Puppy-Pet-Toys-Touch-Sensing-Function-Gift-4-5-6-Ages-Boys_3eb61e1b-53ab-4d2d-89b0-4b3e37c92c0c.fc3eace656f33f5545b80c97b1c2c79e.jpeg",
+            "https://www.bedee.net/image/cache/catalog/bedee/MPrkjpZbkiNa4NTC9giu2cRgXLsQObUu4lDbX3ZPwU4q7dBd3KleFEQRuWmfk-1000x1000.jpg",
+            "https://i.ebayimg.com/images/g/RVAAAOSwS-xoKo5x/s-l500.jpg"
         ],
 
         offers: [
