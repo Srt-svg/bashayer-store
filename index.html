@@ -3,108 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر بشاير | المظلة الذكية للسيارة</title>
+    <title>متجر بشاير | المظلة الذكية للسيارة (Titanium Pro)</title>
+    <meta name="description" content="المظلة الذكية لحماية زجاج السيارة وعزل 99% من حرارة شمس الكويت. الدفع نقدًا عند الاستلام بعد المعاينة مع توصيل سريع.">
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <div class="bg-emerald-600 text-white text-center py-2 px-4 text-xs font-semibold flex items-center justify-center gap-2">
-        <i class="fa-solid fa-truck-fast"></i>
-        <span>توصيل سريع لجميع مناطق الكويت | الدفع عند الاستلام بعد المعاينة 🚚</span>
+<body class="bg-slate-50 text-slate-800 pb-20 sm:pb-8">
+
+    <!-- شريط الإعلان الذكي العلوي -->
+    <div class="bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-700 text-white text-xs sm:text-sm py-2 px-4 shadow-sm">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 text-[10px] animate-pulse">🚚</span>
+                <span class="font-bold">توصيل سريع مجاني لكافة مناطق الكويت | الدفع عند الاستلام بعد المعاينة</span>
+            </div>
+            <div class="hidden md:flex items-center gap-2 text-emerald-100 text-xs font-semibold">
+                <i class="fa-solid fa-clock"></i>
+                <span>عرض الصيف ينتهي قريباً</span>
+            </div>
+        </div>
     </div>
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xl">ب</div>
+    <!-- الهيدر الحديث -->
+    <header class="glass-card sticky top-0 z-40 border-b border-slate-200/80">
+        <div class="max-w-4xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex items-center justify-center font-black text-xl shadow-sm">
+                    ب
+                </div>
                 <div>
-                    <span class="text-xl font-extrabold text-gray-900">متجر بشاير</span>
-                    <span class="block text-xs text-gray-500">الكويت</span>
+                    <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-none">بشاير</span>
+                    <span class="text-[11px] font-semibold text-emerald-600 uppercase tracking-wider">Bashayer Store • الكويت</span>
                 </div>
             </div>
-            <a href="https://wa.me/96596682986" target="_blank" class="flex items-center gap-2 text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full text-xs font-bold border border-emerald-200">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
-                <span>خدمة العملاء</span>
+            <a href="https://wa.me/96596682986" target="_blank" class="flex items-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shadow-xs">
+                <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
+                <span>استفسار مباشر</span>
             </a>
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-4 py-6 space-y-6">
-        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 sm:p-8">
-            <div class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full mb-3">🔥 الأكثر طلباً في الكويت</div>
-            <h1 class="text-2xl sm:text-3xl font-black text-gray-900 leading-snug mb-3">المظلة الذكية للزجاج الأمامي للسيارة – عزل فائق 99% من حرارة شمس الكويت</h1>
-            <p class="text-gray-600 text-sm mb-4">وداعاً لعجلة القيادة الحارقة والمقاعد الساخنة! مظلة تُفتح وتُغلق في 3 ثوانٍ تمنح مقصورة سيارتك برودة فورية.</p>
+    <main class="max-w-3xl mx-auto px-4 py-6 space-y-8">
 
-            <div class="flex flex-wrap items-center justify-between gap-4 bg-gray-50 p-4 rounded-xl mb-6">
-                <div>
-                    <div class="text-amber-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span class="text-gray-600 text-xs font-bold">(4.9/5 - 180+ تقييم)</span></div>
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-3xl font-black text-emerald-600" id="display-price">11.500 د.ك</span>
-                        <span class="text-sm text-gray-400 line-through">18.000 د.ك</span>
-                        <span class="bg-red-100 text-red-700 text-xs font-bold px-2 py-0.5 rounded">وفر 35%</span>
+        <!-- سيكشن البطل (Hero Showcase) -->
+        <section id="hero-section" class="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-slate-200/80">
+            <!-- شارات الثقة الفورية -->
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="inline-flex items-center gap-1.5 bg-amber-50 text-amber-800 border border-amber-200 text-xs font-extrabold px-3 py-1 rounded-full">
+                    <i class="fa-solid fa-fire text-amber-500"></i>
+                    <span>الأكثر مبيعاً هذا الأسبوع في الكويت</span>
+                </span>
+                <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold px-3 py-1 rounded-full">
+                    <i class="fa-solid fa-shield-check text-emerald-600"></i>
+                    <span>ضمان الجودة والتجربة</span>
+                </span>
+            </div>
+
+            <!-- العنوان الرئيسي -->
+            <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug mb-3">
+                المظلة الذكية للزجاج الأمامي للسيارة – عزل فائق 99.8% من حرارة شمس الكويت
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-5">
+                تخلص نهائيًا من المقود الحارق والمقاعد الساخنة! مظلة ميكانيكية مدمجة تُفتح وتُغلق في 3 ثوانٍ فقط، تمنح سيارتك برودة فورية وتحمي الفرش والديكور الداخلي من التشقق والتلف.
+            </p>
+
+            <!-- بطاقة السعر وحالة المخزون -->
+            <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 sm:p-5 mb-6">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 text-sm mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-slate-700 text-xs font-extrabold mr-1.5">4.94/5 (بناءً على 236 تقييم كويتي موثق)</span>
+                        </div>
+                        <div class="flex items-baseline gap-2.5">
+                            <span id="display-hero-price" class="text-3xl sm:text-4xl font-black text-emerald-600">19.500 د.ك</span>
+                            <span class="text-sm text-slate-400 line-through font-medium">29.000 د.ك</span>
+                            <span class="bg-rose-100 text-rose-700 text-xs font-black px-2 py-0.5 rounded-md">وفر 35%</span>
+                        </div>
+                    </div>
+                    <a href="#checkout-section" class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-6 py-3.5 rounded-2xl shadow-md transition-all flex items-center gap-2 cta-glow">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>اطلب الآن - والدفع بعد المعاينة</span>
+                    </a>
+                </div>
+
+                <!-- شريط ندرة المخزون -->
+                <div class="mt-4 pt-3 border-t border-slate-200">
+                    <div class="flex justify-between items-center text-xs font-bold mb-1.5">
+                        <span class="text-rose-600 flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+                            متبقي 9 قطع فقط في المستودع المحلي
+                        </span>
+                        <span class="text-slate-500">14 زائر يشاهدون العرض الآن</span>
+                    </div>
+                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-amber-500 to-rose-500 h-full rounded-full" style="width: 82%;"></div>
                     </div>
                 </div>
-                <a href="#order-section" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-md pulse-btn">اطلب الآن</a>
             </div>
-            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80" alt="المظلة الذكية" class="w-full h-64 sm:h-80 object-cover rounded-xl shadow-inner">
+
+            <!-- معرض الصور التفاعلي (Interactive Gallery) -->
+            <div class="space-y-3">
+                <div class="relative overflow-hidden rounded-2xl bg-slate-100 shadow-inner">
+                    <img id="main-product-img" src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1000&q=85" alt="المظلة الذكية للسيارة" class="w-full h-64 sm:h-96 object-cover transition-opacity duration-300">
+                    <div class="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-bold">
+                        تصميم Titanium Pro المطور
+                    </div>
+                </div>
+                <!-- المصغرات التفاعلية -->
+                <div class="grid grid-cols-4 gap-2">
+                    <button type="button" data-img="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1000&q=85" class="gallery-thumb ring-2 ring-emerald-600 rounded-xl overflow-hidden h-20">
+                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=300&q=80" alt="صورة 1" class="w-full h-full object-cover">
+                    </button>
+                    <button type="button" data-img="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" class="gallery-thumb opacity-70 hover:opacity-100 rounded-xl overflow-hidden h-20 transition">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=300&q=80" alt="صورة 2" class="w-full h-full object-cover">
+                    </button>
+                    <button type="button" data-img="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=600&q=80" class="gallery-thumb opacity-70 hover:opacity-100 rounded-xl overflow-hidden h-20 transition">
+                        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=300&q=80" alt="صورة 3" class="w-full h-full object-cover">
+                    </button>
+                    <button type="button" data-img="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80" class="gallery-thumb opacity-70 hover:opacity-100 rounded-xl overflow-hidden h-20 transition">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=300&q=80" alt="صورة 4" class="w-full h-full object-cover">
+                    </button>
+                </div>
+            </div>
         </section>
 
-        <!-- نموذج الطلب -->
-        <section id="order-section" class="bg-white rounded-2xl shadow-lg border-2 border-emerald-500 p-5 sm:p-8">
-            <div class="text-center mb-6">
-                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">طلب سريع وبدون دفع مسبق</span>
-                <h2 class="text-2xl font-black text-gray-900 mt-2">نموذج تأكيد الطلب</h2>
-                <p class="text-xs text-gray-500 mt-1">الدفع نقدًا عند الاستلام بعد معاينة المنتج وفحصه</p>
+        <!-- مقارنة قبل وبعد (Problem vs Solution) -->
+        <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-slate-200/80">
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-6 text-center">الفرق الحقيقي مع مظلة بشاير الذكية</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div class="p-4 rounded-2xl bg-rose-50/70 border border-rose-200/80">
+                    <div class="flex items-center gap-2 text-rose-700 font-extrabold mb-2">
+                        <i class="fa-solid fa-circle-xmark text-lg"></i>
+                        <span>بدون المظلة الذكية:</span>
+                    </div>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                        <li>• حرارة المقصورة تصل إلى أكثر من 65° مئوية.</li>
+                        <li>• المقود وأقفال الأحزمة تحرق اليدين عند اللمس.</li>
+                        <li>• تشقق الطبلون وبهتان الجلد مع الوقت.</li>
+                        <li>• المكيف يستغرق 15 دقيقة ليبدأ بالتبريد.</li>
+                    </ul>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200/80">
+                    <div class="flex items-center gap-2 text-emerald-700 font-extrabold mb-2">
+                        <i class="fa-solid fa-circle-check text-lg"></i>
+                        <span>مع مظلة بشاير Titanium Pro:</span>
+                    </div>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
+                        <li>• عزل 99.8% من الأشعة فوق البنفسجية والحرارة.</li>
+                        <li>• مقصورة باردة فور ركوبك السيارة.</li>
+                        <li>• حماية الفرش والطبلون لسنوات طويلة.</li>
+                        <li>• فتح وتثبيت بضغطة زر واحدة في 3 ثوانٍ فقط.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- آراء وتقييمات العملاء في الكويت -->
+        <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-slate-200/80">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-xl font-black text-slate-900">تجارب عملاء الكويت</h2>
+                    <p class="text-xs text-slate-500">تقييمات واقعية وموثقة من مختلف المحافظات</p>
+                </div>
+                <div class="flex items-center gap-1 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-full text-emerald-800 text-xs font-extrabold">
+                    <i class="fa-solid fa-star text-amber-400"></i>
+                    <span>4.9 / 5</span>
+                </div>
             </div>
 
-            <form id="checkout-form" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <label class="border-2 border-emerald-500 bg-emerald-50/40 p-3 rounded-xl flex items-center justify-between cursor-pointer">
-                        <div class="flex items-center gap-2">
-                            <input type="radio" name="offer" value="1" checked onchange="CheckoutManager.setOffer(1)" class="accent-emerald-600">
-                            <span class="text-sm font-bold text-gray-900">قطعة واحدة</span>
-                        </div>
-                        <span class="font-black text-emerald-700 text-sm">11.500 د.ك</span>
-                    </label>
-                    <label class="border-2 border-gray-200 p-3 rounded-xl flex items-center justify-between cursor-pointer">
-                        <div class="flex items-center gap-2">
-                            <input type="radio" name="offer" value="2" onchange="CheckoutManager.setOffer(2)" class="accent-emerald-600">
-                            <div><span class="text-sm font-bold text-gray-900">قطعتان</span><span class="block text-[10px] text-emerald-600 font-bold">وفر 3.500 د.ك</span></div>
-                        </div>
-                        <span class="font-black text-emerald-700 text-sm">19.500 د.ك</span>
-                    </label>
+            <div class="space-y-3">
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/60">
+                    <div class="flex justify-between items-center mb-1.5">
+                        <span class="font-bold text-slate-900 text-sm">مبارك العازمي - السالمية (حولي)</span>
+                        <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600">"فرقت معاي وايد في حرارة الظهر أثناء الدوام، السيارة ما تعود حارة نهائيًا والفتح والتسكير مثل مظلة المطر بالضبط، طلبت باقة الحبتين لسيارتي وسيارة الأهل."</p>
                 </div>
 
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">الاسم الكامل *</label>
-                    <input type="text" id="cust-name" required placeholder="مثال: مبارك العازمي" class="w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">رقم الهاتف (واتساب) *</label>
-                    <input type="tel" id="cust-phone" required placeholder="مثال: 98765432" maxlength="8" class="w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm text-left" dir="ltr">
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">المحافظة *</label>
-                        <select id="cust-gov" required class="w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm bg-white">
-                            <option value="">اختر المحافظة...</option>
-                            <option value="العاصمة">العاصمة</option><option value="حولي">حولي</option><option value="الفروانية">الفروانية</option>
-                            <option value="الأحمدي">الأحمدي</option><option value="مبارك الكبير">مبارك الكبير</option><option value="الجهراء">الجهراء</option>
-                        </select>
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/60">
+                    <div class="flex justify-between items-center mb-1.5">
+                        <span class="font-bold text-slate-900 text-sm">أم عبد الله - كيفان (العاصمة)</span>
+                        <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">العنوان بالتفصيل *</label>
-                        <input type="text" id="cust-address" required placeholder="المنطقة، ق 2، ش 5" class="w-full px-3 py-2.5 rounded-lg border border-gray-300 text-sm">
+                    <p class="text-xs sm:text-sm text-slate-600">"التوصيل كان سريع جدًا وصلني المندوب ثاني يوم الصبح، وعاينت المظلة وفحصت خاماتها قبل ما أدفع كاش. شكرًا متجر بشاير على المصداقية."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- نموذج الطلب الاحترافي المباشر -->
+        <section id="checkout-section" class="bg-white rounded-3xl p-5 sm:p-8 shadow-xl border-2 border-emerald-600 relative overflow-hidden">
+            <div class="text-center mb-6">
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider">طلب سريع وبدون دفع مسبق</span>
+                <h2 class="text-2xl font-black text-slate-900 mt-2">نموذج تأكيد الطلب</h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">ادفع نقدًا لمندوب التوصيل بعد استلام ومعاينة المنتج وفحصه</p>
+            </div>
+
+            <form id="order-form" class="space-y-5">
+
+                <!-- باقات العروض الديناميكية -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-900 mb-2.5">1. اختر باقة العرض المناسبة:</label>
+                    <div id="offers-container" class="space-y-3">
+                        <!-- يُبنى تلقائيًا من checkout.js -->
                     </div>
                 </div>
 
-                <div class="bg-emerald-50 border border-emerald-200 p-3 rounded-xl flex items-center justify-between text-xs">
-                    <span class="font-bold text-emerald-900">💵 طريقة الدفع: الدفع نقدًا عند الاستلام فقط</span>
-                    <i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>
+                <!-- بيانات العميل والتوصيل -->
+                <div class="space-y-3 pt-2">
+                    <label class="block text-sm font-bold text-slate-900">2. بيانات التوصيل داخل الكويت:</label>
+                    <div>
+                        <input type="text" id="input-name" required placeholder="الاسم الكامل (مثال: فهد الشمري)" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                    </div>
+
+                    <div>
+                        <input type="tel" id="input-phone" required placeholder="رقم الهاتف والواتساب (مثال: 98765432)" maxlength="8" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm text-left font-mono" dir="ltr">
+                        <span id="phone-error" class="hidden text-xs text-rose-600 font-bold mt-1 block">يرجى إدخال رقم هاتف كويتي صحيح من 8 أرقام يبدأ بـ 5 أو 6 أو 9.</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <select id="input-gov" required class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm bg-white">
+                                <option value="">اختر المحافظة...</option>
+                                <option value="العاصمة">العاصمة</option>
+                                <option value="حولي">حولي</option>
+                                <option value="الفروانية">الفروانية</option>
+                                <option value="الأحمدي">الأحمدي</option>
+                                <option value="مبارك الكبير">مبارك الكبير</option>
+                                <option value="الجهراء">الجهراء</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="text" id="input-address" required placeholder="المنطقة، ق 4، ش 12، م 5" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-gray-50 p-4 rounded-xl text-sm border flex justify-between items-center">
-                    <span class="font-bold text-gray-800">الإجمالي عند الاستلام (توصيل مجاني):</span>
-                    <span id="summary-total"
+                <!-- شارة الدفع عند الاستلام -->
+                <div class="bg-emerald-50 border border-emerald-200/80 p-4 rounded-2xl flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-emerald-950">طريقة الدفع: الدفع عند الاستلام (COD)</span>
+                            <span class="text-xs text-emerald-700">لا تدفع أي فلس الآن، الدفع نقدًا بعد فتح الصندوق والمعاينة</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-shield-check text-emerald-600 text-2xl"></i>
+                </div>
 
+                <!-- ملخص الحساب -->
+                <div class="bg-slate-50 p-4 rounded-2xl space-y-2 text-sm border border-slate-200">
+                    <div class="flex justify-between text-slate-600">
+                        <span>سعر الباقة:</span>
+                        <span id="summary-subtotal" class="font-bold text-slate-900">19.500 د.ك</span>
+                    </div>
+                    <div class="flex justify-between text-slate-600">
+                        <span>الشحن السريع:</span>
+                        <span class="font-bold text-emerald-600">مجاني لجميع مناطق الكويت 🚚</span>
+                    </div>
+                    <div class="border-t border-slate-200 pt-2 flex justify-between items-center text-base font-black text-slate-900">
+                        <span>المبلغ الإجمالي عند الاستلام:</span>
+                        <span id="summary-total" class="text-emerald-700 text-xl font-black">19.500 د.ك</span>
+                    </div>
+                </div>
+
+                <!-- زر تأكيد الطلب -->
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-4 px-4 rounded-2xl shadow-lg transition-all flex items-center justify-center gap-3 text-base cta-glow">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>تأكيد الطلب والدفع عند الاستلام</span>
+                </button>
+            </form>
+
+            <div id="order-success-card" class="hidden mt-5 p-5 bg-emerald-50 border border-emerald-300 rounded-2xl text-center">
+                <i class="fa-solid fa-circle-check text-emerald-600 text-4xl mb-2"></i>
+                <h3 class="font-black text-emerald-900 text-lg">تم تسجيل طلبك بنجاح!</h3>
+                <p class="text-xs sm:text-sm text-emerald-700 mt-1">جاري فتح واتساب متجر بشاير لتأكيد العنوان وموعد التوصيل...</p>
+            </div>
+        </section>
+
+        <!-- الأسئلة الشائعة (FAQ Accordion) -->
+        <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-slate-200/80">
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-5 text-center">الأسئلة الشائعة</h2>
+            <div id="faq-container" class="space-y-3">
+                <!-- يُبنى تلقائيًا من config.js -->
+            </div>
+        </section>
+
+        <!-- ضمانات المتجر -->
+        <section class="grid grid-cols-3 gap-3 text-center text-xs text-slate-600">
+            <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs">
+                <i class="fa-solid fa-rotate-left text-emerald-600 text-xl mb-1.5"></i>
+                <div class="font-bold text-slate-900">استبدال 14 يوم</div>
+                <div class="text-[11px] text-slate-500">ضمان استبدال فوري</div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs">
+                <i class="fa-solid fa-truck-fast text-emerald-600 text-xl mb-1.5"></i>
+                <div class="font-bold text-slate-900">شحن 24-48 س</div>
+                <div class="text-[11px] text-slate-500">لكافة مناطق الكويت</div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs">
+                <i class="fa-solid fa-headset text-emerald-600 text-xl mb-1.5"></i>
+                <div class="font-bold text-slate-900">دعم متواصل</div>
+                <div class="text-[11px] text-slate-500">خدمة عملاء على واتساب</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="bg-slate-950 text-slate-400 py-8 text-center text-xs mt-12 border-t border-slate-800">
+        <div class="max-w-3xl mx-auto px-4 space-y-2">
+            <p class="text-slate-200 font-extrabold text-base">متجر بشاير | Bashayer Store - الكويت</p>
+            <p class="text-slate-500">خدمة العملاء والطلبات: +96596682986</p>
+            <p class="text-slate-600">جميع الحقوق محفوظة © 2026</p>
+        </div>
+    </footer>
+
+    <!-- شريط الشراء السفلي المثبت للهواتف (Sticky Mobile Action Bar) -->
+    <div id="sticky-bottom-bar" class="sticky-bottom-bar fixed bottom-0 left-0 right-0 z-50 glass-card border-t border-slate-200/80 p-3 sm:hidden">
+        <div class="flex items-center justify-between gap-3">
+            <div>
+                <span class="text-[11px] text-slate-500 block font-medium">سعر العرض:</span>
+                <span id="sticky-price" class="text-lg font-black text-emerald-700">19.500 د.ك</span>
+            </div>
+            <a href="#checkout-section" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-1.5">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>اطلب الآن</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- نافذة إشعار المبيعات الحية (Live Social Proof Toast) -->
+    <div id="live-toast" class="toast-popup fixed bottom-4 right-4 z-50 glass-card border border-emerald-200 shadow-xl rounded-2xl p-3 flex items-center gap-3 max-w-xs">
+        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-sm">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="text-xs leading-tight">
+            <span class="font-extrabold text-slate-900 block" id="toast-customer-name">مبارك العازمي</span>
+            <span class="text-slate-500 block">اشترى <span id="toast-offer" class="text-emerald-700 font-bold">باقة قطعتين</span> من <span id="toast-customer-city">حولي</span></span>
+            <span class="text-[10px] text-slate-400 font-semibold" id="toast-time">منذ 4 دقائق</span>
+        </div>
+    </div>
+
+    <!-- السكربتات المنظمة -->
+    <script src="js/config.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

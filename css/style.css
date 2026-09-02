@@ -1,4 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
-body { font-family: 'Cairo', sans-serif; }
-.pulse-btn { animation: pulse 2s infinite; }
-@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+/**
+ * متجر بشاير - التصميم والهوية البصرية المتقدمة
+ * Modern High-Converting E-Commerce Design System
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+:root {
+    --primary: #059669;
+    --primary-dark: #047857;
+    --primary-light: #d1fae5;
+    --accent: #f59e0b;
+    --dark: #0f172a;
+    --slate: #334155;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --surface: #ffffff;
+    --bg-page: #f8fafc;
+}
+
+body {
+    font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* بطاقات ذات خلفية ضبابية وزجاجية (Glassmorphism) */
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* شريط الشراء السفلي المثبت للهواتف */
+.sticky-bottom-bar {
+    transform: translateY(120%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sticky-bottom-bar.active {
+    transform: translateY(0);
+}
+
+/* نبض وزر الحث على اتخاذ إجراء (CTA Pulse) */
+.cta-glow {
+    position: relative;
+    transition: all 0.25s ease;
+}
+.cta-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -6px rgba(5, 150, 105, 0.4);
+}
+
+/* نافذة إشعار المبيعات الحية التفاعلية */
+.toast-popup {
+    transform: translateX(-150%);
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
+    opacity: 0;
+}
+.toast-popup.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* أكورديون الأسئلة الشائعة */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.2s ease;
+    opacity: 0;
+}
+.faq-item.active .faq-answer {
+    max-height: 250px;
+    opacity: 1;
+}
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+}
+
+/* وميض زر الحث */
+@keyframes softPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+.pulse-anim {
+    animation: softPulse 2.5s infinite ease-in-out;
+}
+
+/* إخفاء شريط التمرير */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
