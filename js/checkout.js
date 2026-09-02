@@ -1,9 +1,9 @@
 /**
- * إدارة وتأكيد عمليات الطلب بأعلى معدل تحويل (High Conversion)
+ * إدارة وتأكيد عمليات الطلب - سوق الإمارات
  */
 
 const CheckoutManager = {
-    selectedOffer: STORE_CONFIG.product.offers[1], // باقة التوفير افتراضيًا
+    selectedOffer: STORE_CONFIG.product.offers[1],
 
     init() {
         this.renderOffersUI();
@@ -25,7 +25,7 @@ const CheckoutManager = {
                     </div>
                 </div>
                 <div class="text-left">
-                    <span class="text-lg font-black text-emerald-700">${offer.price.toFixed(3)}</span>
+                    <span class="text-lg font-black text-emerald-700">${offer.price.toFixed(0)}</span>
                     <span class="text-xs font-bold text-emerald-600 block">${STORE_CONFIG.currency}</span>
                 </div>
             </label>
@@ -42,7 +42,7 @@ const CheckoutManager = {
     },
 
     updatePricing() {
-        const formatted = `${this.selectedOffer.price.toFixed(3)} ${STORE_CONFIG.currency}`;
+        const formatted = `${this.selectedOffer.price.toFixed(0)} ${STORE_CONFIG.currency}`;
         
         const heroPrice = document.getElementById('display-hero-price');
         const summarySubtotal = document.getElementById('summary-subtotal');
@@ -55,31 +55,32 @@ const CheckoutManager = {
         if (stickyPrice) stickyPrice.innerText = formatted;
     },
 
-    validateKuwaitPhone(phone) {
+    // التحقق من صحة أرقام الهواتف في الإمارات (يبدأ بـ 05 ويتكون من 9 أو 10 أرقام)
+    validateUAEPhone(phone) {
         const clean = phone.replace(/[^0-9]/g, '');
-        return /^(9|6|5)[0-9]{7}$/.test(clean);
+        return /^(05|5)[0-9]{8}$/.test(clean);
     },
 
     buildWhatsAppPayload(customer) {
         const offer = this.selectedOffer;
-        const total = `${offer.price.toFixed(3)} ${STORE_CONFIG.currency}`;
+        const total = `${offer.price.toFixed(0)} ${STORE_CONFIG.currency}`;
 
-        const text = `مرحباً ${STORE_CONFIG.storeName}، أود تأكيد طلب شراء جديد:
+        const text = `مرحباً ${STORE_CONFIG.storeName}، أود تأكيد طلب شراء:
 
-📦 *تفاصيل المنتج والطلب:*
+🐶 *تفاصيل المنتج والطلب:*
 - المنتج: ${STORE_CONFIG.product.title}
-- الباقة: ${offer.title} (${offer.quantity} قطعة)
-- السعر المطلوب: ${total} (شحن سريع مجاني)
-- طريقة الدفع: الدفع عند الاستلام بعد المعاينة (نقدًا أو كي نت مع المندوب)
+- الباقة: ${offer.title} (${offer.quantity} روبوت)
+- السعر الإجمالي: ${total} (توصيل مجاني لكافة الإمارات)
+- طريقة الدفع: الدفع نقدًا عند الاستلام بعد المعاينة (COD)
 
-👤 *بيانات المستلم والتوصيل:*
-- الاسم: ${customer.name}
+👤 *بيانات العميل المستلم:*
+- الاسم الكريم: ${customer.name}
 - الهاتف: ${customer.phone}
-- المحافظة: ${customer.gov}
-- العنوان: ${customer.address}
-${customer.notes ? `- ملاحظات: ${customer.notes}` : ''}
+- الإمارة / المدينة: ${customer.gov}
+- العنوان بالتفصيل: ${customer.address}
+${customer.notes ? `- ملاحظات التسليم: ${customer.notes}` : ''}
 
-يرجى إفادتي بموعد خروج الشحنة. مع الشكر والتقدير!`;
+يرجى تأكيد تجهيز الشحنة وموعد وصول المندوب. شكراً جزيلاً!`;
 
         return `https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`;
     }

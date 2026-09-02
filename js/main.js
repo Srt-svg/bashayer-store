@@ -1,11 +1,10 @@
 /**
- * التفاعلات الحية وإدارة تجربة المستخدم الفائقة
- * Interactive UI Controller, Live Social Proof & Micro-interactions
+ * التحكم بتفاعلات واجهة المستخدم والأحداث - سوق الإمارات
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. إدارة معرض الصور (Gallery Controller)
+    // إدارة معرض الصور
     const mainImg = document.getElementById('main-product-img');
     const thumbButtons = document.querySelectorAll('.gallery-thumb');
     
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. الشريط السفلي المثبت للهواتف (Sticky Bottom Action Bar)
+    // الشريط السفلي المثبت
     const stickyBar = document.getElementById('sticky-bottom-bar');
     const heroSection = document.getElementById('hero-section');
 
@@ -37,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. أكورديون الأسئلة الشائعة (FAQ Accordion)
+    // أكورديون الأسئلة الشائعة
     const faqContainer = document.getElementById('faq-container');
     if (faqContainer && STORE_CONFIG.product.faqs) {
-        faqContainer.innerHTML = STORE_CONFIG.product.faqs.map((faq, i) => `
+        faqContainer.innerHTML = STORE_CONFIG.product.faqs.map((faq) => `
             <div class="faq-item border border-slate-200/80 rounded-xl overflow-hidden bg-white transition-all duration-200">
                 <button type="button" class="w-full px-5 py-4 text-right flex items-center justify-between font-bold text-slate-800 hover:text-emerald-700 text-sm sm:text-base">
                     <span>${faq.q}</span>
@@ -63,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. محرك الإشعارات الاجتماعية الحية (Live Social Proof Engine)
+    // إشعارات المبيعات الحية
     const toast = document.getElementById('live-toast');
     const toastName = document.getElementById('toast-customer-name');
     const toastCity = document.getElementById('toast-customer-city');
@@ -87,12 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
             currentIndex = (currentIndex + 1) % STORE_CONFIG.livePurchases.length;
         }
 
-        // إطلاق أول إشعار بعد 4 ثوانٍ ثم كل 14 ثانية
-        setTimeout(showNextToast, 4000);
+        setTimeout(showNextToast, 3500);
         setInterval(showNextToast, 14000);
     }
 
-    // 5. نموذج الطلب المتقدم
+    // تقديم نموذج الطلب
     const form = document.getElementById('order-form');
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -104,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const address = document.getElementById('input-address').value.trim();
             const notes = document.getElementById('input-notes') ? document.getElementById('input-notes').value.trim() : '';
 
-            if (!CheckoutManager.validateKuwaitPhone(phone)) {
+            if (!CheckoutManager.validateUAEPhone(phone)) {
                 const phoneError = document.getElementById('phone-error');
                 if (phoneError) phoneError.classList.remove('hidden');
                 document.getElementById('input-phone').focus();
